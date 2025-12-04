@@ -136,7 +136,7 @@ def calculate_door_password(instruction_set: list, starting_pos: int = 50) -> in
 
 
 if __name__ == "__main__":
-    input_data = parse_input("day_one_real_data.txt")
+    input_data = parse_input("data/day_one_real_data.txt")
     answer_part_1 = calculate_door_password(input_data)
     print(f"Part One: {answer_part_1}")
 
