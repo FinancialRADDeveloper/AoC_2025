@@ -38,13 +38,13 @@ def calculate_total_output_joltage(joltage_list: list[str]) -> int:
                 if item > second_digit:
                     second_digit = item
             else:
-                if item >= first_digit:
+                if item > first_digit:
                     first_digit = item
                     second_digit = 0
-                elif item >= second_digit:
+                elif item > second_digit:
                     second_digit = item
 
-            print(f"So far: {first_digit=} {second_digit=}")
+            # print(f"So far: {first_digit=} {second_digit=}")
 
         print(f"Final: {first_digit=} {second_digit=}")
 
@@ -56,5 +56,11 @@ def calculate_total_output_joltage(joltage_list: list[str]) -> int:
 if __name__ == "__main__":
     joltage_list = parse_input("data/day_3_example_data.txt")
     print(f"{joltage_list=}")
-    total_output_joltage = calculate_total_output_joltage(joltage_list)
-    print(f"{total_output_joltage=}")
+    total_output_joltage_example = calculate_total_output_joltage(joltage_list)
+    print(f"{total_output_joltage_example=}")
+
+    joltage_list = parse_input("data/day_3_real_data.txt")
+    print(f"{joltage_list=}")
+    total_output_joltage_real = calculate_total_output_joltage(joltage_list)
+    print(f"{total_output_joltage_real=}")
+
