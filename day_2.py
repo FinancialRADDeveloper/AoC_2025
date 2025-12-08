@@ -6,7 +6,7 @@ def parse_input(filepath:str) -> list[str]:
     
     We can then hand that to another function to use. 
     
-    :param file_path: 
+    :param filepath:
     :return: 
     """
 
